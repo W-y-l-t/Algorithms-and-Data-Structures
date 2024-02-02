@@ -19,8 +19,7 @@ void CountingSort(int64_t data[], size_t n) {
         maximum = std::max(maximum, data[i]);
     }
 
-    auto* count = static_cast<int64_t*>(calloc(maximum,
-        sizeof (int64_t)));
+    auto* count = static_cast<int64_t*>(calloc(maximum + 1, sizeof (int64_t)));
 
     for (size_t i = 0; i < n; ++i) {
         count[data[i]] += 1;
